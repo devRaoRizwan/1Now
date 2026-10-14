@@ -1,0 +1,210 @@
+/* Booking list */
+.list-card {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+}
+
+.list-scroll { padding: 0 8px 8px; overflow-y: auto; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 16px 8px; }
+
+.filter-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--white);
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-capsule:hover { color: var(--ink); border-color: var(--muted-2); }
+.filter-capsule.active { color: var(--white); background: var(--ink); border-color: var(--ink); }
+.filter-count { font-size: 12px; font-variant-numeric: tabular-nums; opacity: 0.7; }
+
+.booking-group + .booking-group {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line-2);
+}
+
+.group-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.group-mark { flex-shrink: 0; align-self: stretch; width: 4px; border-radius: 4px; }
+.group-text { display: flex; flex: 1; flex-direction: column; min-width: 0; line-height: 1.3; }
+.group-title { font-size: 13px; font-weight: 600; }
+.group-hint { font-size: 12px; color: var(--muted); }
+
+.group-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  border-radius: 999px;
+}
+
+.booking-group.open .group-heading { background: var(--peach-2); }
+.booking-group.open .group-mark { background: var(--orange); }
+.booking-group.open .group-count { color: var(--white); background: var(--orange); }
+.booking-group.closed .group-heading { background: var(--cream-2); }
+.booking-group.closed .group-mark { background: var(--muted-2); }
+.booking-group.closed .group-count { color: var(--muted); background: var(--white); border: 1px solid var(--line-2); }
+.booking-group.closed .row-name { font-weight: 500; color: var(--ink-soft); }
+
+.booking-list { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+
+.booking-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 12px;
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.booking-row:hover { background: var(--cream); }
+.booking-row.selected { background: var(--peach-2); border-color: var(--orange); }
+.booking-row .capsule { justify-self: end; }
+
+.row-name,
+.row-meta {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row-name { font-weight: 600; }
+.row-meta { font-size: 12px; color: var(--muted); }
+.row-status { font-size: 12px; text-align: right; color: var(--muted-2); }
+
+/* Booking detail */
+.detail-card { padding: 28px 32px; }
+.empty-state { padding: 80px 24px; text-align: center; }
+.empty-state h3 { margin-bottom: 4px; }
+
+.detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+
+.score { display: flex; flex-direction: column; align-items: flex-end; }
+.score-value { font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; }
+.score-label { margin-top: 4px; font-size: 12px; font-weight: 600; }
+.score.low { color: var(--low); }
+.score.medium { color: var(--medium); }
+.score.high { color: var(--high); }
+
+.summary,
+.details {
+  display: grid;
+  gap: 16px 24px;
+  margin: 0;
+}
+
+.summary {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.details { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+.summary dt,
+.details dt { font-size: 12px; color: var(--muted-2); }
+
+.summary dd,
+.details dd { margin: 2px 0 0; font-weight: 500; overflow-wrap: anywhere; }
+
+.decision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.decision.low { background: var(--low-bg); border-color: var(--low-line); }
+.decision.medium { background: var(--medium-bg); border-color: var(--medium-line); }
+.decision.high { background: var(--high-bg); border-color: var(--high-line); }
+.decision-label { font-size: 12px; color: var(--muted); }
+.decision-text { font-weight: 600; }
+.decision-buttons { display: flex; gap: 8px; }
+
+.section { margin-top: 32px; }
+.section h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+
+.reasons-table td { vertical-align: top; }
+.reasons-table .col-points { width: 64px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--orange-text); }
+.reasons-table .col-source { width: 150px; text-align: right; }
+.reasons-table tfoot td { font-weight: 600; border-bottom: 0; }
+.reasons-table tfoot .col-points { color: var(--ink); }
+.reason-label { font-weight: 500; }
+.reason-detail { margin-top: 2px; font-size: 13px; color: var(--muted); }
+
+/* Report box */
+.report-box {
+  margin-top: 32px;
+  padding: 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.report-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.report-head p { margin-top: 2px; }
+.own-reports { margin: 12px 0 0; padding-left: 18px; }
+
+.report-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.report-form .wide { grid-column: 1 / -1; }
+
+/* New booking form */
+.demo-fill {
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-row-3 { display: grid; grid-column: 1 / -1; grid-template-columns: 100px 1fr 1fr; gap: 16px; }
+
+/* Reports page */
+.reports-card { padding: 24px 28px; }
+.note { margin-bottom: 8px; }

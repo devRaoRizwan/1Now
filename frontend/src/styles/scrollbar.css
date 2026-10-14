@@ -1,0 +1,36 @@
+/* Slim, rounded scrollbars in the 1Now palette (page, booking list, dropdowns, dialog). */
+/* Firefox. Chrome ignores the ::-webkit rules below when these are set, so scope them. */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-2) transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--orange);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

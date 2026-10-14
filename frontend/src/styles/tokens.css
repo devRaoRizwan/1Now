@@ -1,0 +1,37 @@
+/* Colours and type taken from 1now.ai: Geist, navy ink, warm orange accent, cream background. */
+:root {
+  --ink: #14253a;
+  --ink-soft: #3d4a5c;
+  --muted: #55677a;
+  --muted-2: #8a94a0;
+  --cream: #faf8f4;
+  --cream-2: #f3f0ea;
+  --line: #ece8e1;
+  --line-2: #dce3eb;
+  --white: #ffffff;
+
+  --orange: #fe7743;
+  --orange-hover: #ff8e5e;
+  --orange-text: #c4511f;
+  --orange-line: #fdc5ad;
+  --peach: #ffebdf;
+  --peach-2: #fff6f1;
+
+  /* Risk levels stay separate from the brand orange. */
+  --low: #0f8a55;
+  --low-bg: #e8f7ef;
+  --low-line: #bfe8d2;
+  --medium: #a15c00;
+  --medium-bg: #fff4dc;
+  --medium-line: #f3d9a4;
+  --high: #c7303a;
+  --high-bg: #fdecec;
+  --high-line: #f5c2c5;
+
+  --sidebar-width: 248px;
+  --page-padding: 32px;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-menu: 0 12px 32px rgba(20, 37, 58, 0.14), 0 2px 6px rgba(20, 37, 58, 0.06);
+}
