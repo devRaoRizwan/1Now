@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/4306a56a-95c3-4ad4-9a95-dd1435580818
-
 <div align="center">
 
 <img src="frontend/public/logos/1now.svg" alt="1Now" height="30">
@@ -13,15 +9,11 @@ so nobody hands their keys to someone who already caused trouble elsewhere.
 
 Built by **Rao Rizwan** · Take-home assignment for [1Now](https://1now.ai)
 
-<br>
-
-<a href="docs/media/renter-trust-network-demo.mp4">
-  <img src="docs/media/demo-preview.gif" alt="Demo of Renter Trust Network" width="100%">
-</a>
-
-<sub><a href="docs/media/renter-trust-network-demo.mp4">▶ Watch the full demo (1:46)</a></sub>
-
 </div>
+
+## Demo
+
+https://github.com/user-attachments/assets/4306a56a-95c3-4ad4-9a95-dd1435580818
 
 ---
 
